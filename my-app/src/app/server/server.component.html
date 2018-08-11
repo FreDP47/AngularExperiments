@@ -1,3 +1,5 @@
-<p>
-  Server component
+<!-- <p [ngStyle]="{backgroundColor : serverId > 0.5 ? 'yellow' : 'red'}"> -->
+<p [ngStyle]="{backgroundColor : getServerStatus()}"
+   [ngClass]="{offline : serverId < 0.5}">
+  Server with id {{serverId}} has status {{serverStatus}}
 </p>
